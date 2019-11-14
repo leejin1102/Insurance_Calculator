@@ -7,7 +7,7 @@
     <string name="smoker">Smoke?</string>
     <string name="Calculate">Calculate</string>
     <string name="Reset">Reset</string>
-    <string name="insurance_premium">Insurans Premium</string>
+    <string name="insurance_premium">Insurans Premium : </string>
     <string-array name="age_group">
         <item>Less than 17</item>
         <item>17 to 25</item>
