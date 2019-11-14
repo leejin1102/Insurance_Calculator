@@ -1,11 +1,13 @@
 package com.example.insurancecalculator
 
+import android.icu.util.CurrencyAmount
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -71,7 +73,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             else
                 premium += 300
         }
-        textViewIP.text = getString(R.string.insurance_premium)+" RM"+premium
+        val symbol = Currency.getInstance(Locale.getDefault()).symbol
+        textViewIP.text = getString(R.string.insurance_premium)+symbol+premium
     }
     fun resetInput(view: View?){
         //TODO clear all inputs and outputs
